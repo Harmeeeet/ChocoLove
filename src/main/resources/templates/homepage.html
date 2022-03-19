@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+	<script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body>
+<div>
+	<h2 >Spring Boot Crud System -Student Registation</h2>
+	
+	<tr>
+	
+	<div class="col-sm-5" align = "center">
+                 <div class="panel-body" align = "center" >
+                 <table class="table">
+  
+  <tbody>
+      <tr  th:each="product : ${list }">
+		<td th:text="${product.id}"></td>
+		<td th:text="${{product.name}"></td>
+		<td th:text="${{product.course}"></td>
+		<td th:text="${{product.age}"></td>				
+			    
+		</tr> 
+   
+  </tbody>
+</table>
+                    
+                 </div>
+
+            </div> 
+
+	</tr>
+
+	</tbody>
+	</table>
+	<div>
+</body>
+</html>
