@@ -24,4 +24,9 @@ public class ChocoService {
     	
     	repo.save(model);
     }
+    public ChocoModel findOne(String name)
+    {
+    	return repo.findById(name).get();
+    	
+    }
 }

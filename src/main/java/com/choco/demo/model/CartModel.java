@@ -1,24 +1,15 @@
 package com.choco.demo.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class ChocoModel {
+public class CartModel {
+
 	@Id
 	private String name;
 	private int price;
-	private String imagename;
-	
-	public String getImagename() {
-		return imagename;
-	}
-	public void setImagename(String imagename) {
-		this.imagename = imagename;
-	}
-
+	private int qt;
 	public String getName() {
 		return name;
 	}
@@ -31,5 +22,14 @@ public class ChocoModel {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
+	public int getQt() {
+		return qt;
+	}
+	public void setQt(int qt) {
+		this.qt = qt;
+	}
+	public CartModel() {
+		super();
+		this.qt=0;
+	}
 }

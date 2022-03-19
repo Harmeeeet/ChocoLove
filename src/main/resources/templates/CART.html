@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div th:each="cartitems : ${cart}">
+<div style="border:3px solid black">
+NAME:
+<div th:text="${cartitems.name}"></div>
+PRICE:
+<div th:text="${cartitems.price}"></div>
+QTY:
+<div th:text="${cartitems.qty}"></div>
+</div>
+</div>
+</body>
+</html>

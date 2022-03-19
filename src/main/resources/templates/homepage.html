@@ -7,35 +7,17 @@
 	<script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
 </head>
 <body>
-<div>
-	<h2 >Spring Boot Crud System -Student Registation</h2>
-	
-	<tr>
-	
-	<div class="col-sm-5" align = "center">
-                 <div class="panel-body" align = "center" >
-                 <table class="table">
-  
-  <tbody>
-      <tr  th:each="product : ${list }">
-		<td th:text="${product.id}"></td>
-		<td th:text="${{product.name}"></td>
-		<td th:text="${{product.course}"></td>
-		<td th:text="${{product.age}"></td>				
-			    
-		</tr> 
-   
-  </tbody>
-</table>
-                    
-                 </div>
+	<h2>CART</h2>
+	<h1 th:text="${cartsize}"></h1>
+<div th:each ="prod : ${list}">
+<div style= "border:1px solid black">
+<div th:text = "${prod.name}">
+</div>
+<div th:text = "${prod.price}">
+</div>
+<a th:href="@{'addtocart/'+${prod.name}+'/'}">Add</a>
+</div>
+</div>
 
-            </div> 
-
-	</tr>
-
-	</tbody>
-	</table>
-	<div>
 </body>
 </html>

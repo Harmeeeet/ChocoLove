@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="#" th:action= "@{/save}" th:object= "${newmodel}">
+<input type="text" placeholder="name" th:field= "*{name}">
+<input type="number" placeholder="price" th:field= "*{price}">
+<button>Submit</button>
+</form>
+</body>
+</html>
